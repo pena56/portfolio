@@ -2,6 +2,27 @@ import { BsArrowUpRight } from "react-icons/bs";
 
 const data = [
   {
+    title: "Kontrack(Employee) Mobile App",
+    description:
+      "Developed a cross-platform mobile app for Kontrack using React Native, integrating backend API and managing deployment to Play Store and App Store with security measures.",
+    image: "/assets/kontrack.png",
+    link: "https://play.google.com/store/apps/details?id=com.kontrack.mobile&pli=1",
+  },
+  {
+    title: "Trubooker Mobile App",
+    description:
+      "Developed a cross-platform mobile app for Trubooker using React Native, integrating backend API and managing deployment to Play Store and App Store with security measures.",
+    image: "/assets/trubooker-1.jpg",
+    link: "https://play.google.com/store/apps/details?id=com.trubooker.trubooker&hl=en",
+  },
+  {
+    title: "Trubooker Drivers Mobile App",
+    description:
+      "Created a cross-platform mobile app for Trubooker drivers using React Native, integrating backend API and managing deployment to Play Store and App Store with security measures.",
+    image: "/assets/trubooker.jpg",
+    link: "",
+  },
+  {
     title: "Flovest Marketing Website",
     description:
       "Developed a visually appealing and user-friendly marketing website using ReactJS and TailwindCSS, integrating design elements and backend functionality.",
@@ -30,11 +51,16 @@ export default function Projects() {
       {data?.map((project, index) => (
         <div key={index} className="flex flex-col lg:flex-row gap-4 lg:gap-8">
           <div className="flex flex-col gap-4 lg:order-last lg:flex-1">
-            <a href={project?.link} target="_blank">
-              <p className="text-gray-200 text-base font-bold flex items-center gap-2">
+            <a
+              href={project?.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-lg font-semibold text-blue-400 hover:text-blue-300 transition-colors duration-200"
+            >
+              <span className="underline underline-offset-4 decoration-blue-400 group-hover:decoration-blue-300">
                 {project?.title}
-                <BsArrowUpRight />
-              </p>
+              </span>
+              <BsArrowUpRight className="transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
 
             <p className="text-gray-300 text-base">{project?.description}</p>
