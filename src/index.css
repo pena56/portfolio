@@ -6,4 +6,53 @@
   html {
     font-family: "Mooli", sans-serif;
   }
+
+  .animate-blob1 {
+    animation: blob1 12s ease-in-out infinite;
+  }
+
+  .animate-blob2 {
+    animation: blob2 14s ease-in-out infinite;
+  }
+  
+  .animate-blob3 {
+    animation: blob3 16s ease-in-out infinite;
+  }
+}
+
+@keyframes blob1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 20px) scale(0.95);
+  }
+}
+@keyframes blob2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-30px, 40px) scale(1.05);
+  }
+  66% {
+    transform: translate(20px, -20px) scale(0.9);
+  }
+}
+@keyframes blob3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, 30px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, -20px) scale(0.92);
+  }
 }
